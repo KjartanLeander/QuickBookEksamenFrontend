@@ -3,7 +3,6 @@ import { fetchAnyUrl } from "/js/modulejson.js";
 const urlHotels = "http://localhost:8080/hotels";
 const hotelsContainer = document.getElementById("hotels-container");
 
-// Creates a hotel card
 function createHotelCard(hotel) {
     const hotelTemplate = document.createElement("div");
     hotelTemplate.classList.add("col-6", "col-sm-6", "col-md-4", "col-lg-3", "mb-4");
@@ -30,7 +29,6 @@ function createHotelCard(hotel) {
     return hotelTemplate;
 }
 
-// Adds hotels from the backend to HTML
 async function fetchHotels() {
     try {
         const hotels = await fetchAnyUrl(urlHotels);
