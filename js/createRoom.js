@@ -1,4 +1,3 @@
-// Assuming you have retrieved hotelId from the URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const hotelId = urlParams.get('hotelId');
 
@@ -24,14 +23,11 @@ document.getElementById("create-room-form").addEventListener("submit", function 
         .then(data => {
             console.log('Success:', data);
 
-            // Redirect to hotels.html after successful creation
             window.location.href = 'hotels.html';
         })
         .catch((error) => {
             console.error('Error:', error);
-            // Handle the error
         });
 });
 
-// Assuming you have a "Go Back" button
 document.getElementById("goBackBtn").href = `hotelInfo.html?id=${hotelId}`;

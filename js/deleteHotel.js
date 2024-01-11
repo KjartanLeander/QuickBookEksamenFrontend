@@ -3,6 +3,7 @@ const hotelId = urlParams.get('id');
 
 const deleteHotelBtn = document.getElementById("deleteHotelBtn");
 
+
 const goBackBtn = document.getElementById("goBackBtn");
 
 deleteHotelBtn.addEventListener("click", function () {
