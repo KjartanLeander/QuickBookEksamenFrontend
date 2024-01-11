@@ -20,6 +20,10 @@ async function fetchHotelDetails() {
         const hotelInfoHtml = createHotelInfoHtml(hotelData);
         // Display the HTML in the hotel-info-container
         hotelInfoContainer.innerHTML = hotelInfoHtml;
+
+        // Set up the event listener for the buttons after the content is loaded
+        document.getElementById("editHotelBtn").addEventListener("click", editHotel);
+        document.getElementById("deleteHotelBtn").addEventListener("click", deleteHotel);
     } catch (error) {
         console.error("Error fetching hotel details:", error);
     }
@@ -36,9 +40,21 @@ function createHotelInfoHtml(hotelData) {
                 <p class="card-text">Zip: ${hotelData.zip}</p>
                 <p class="card-text">Country: ${hotelData.country}</p>
                 <p class="card-text">Rooms: ${hotelData.rooms.length}</p>
+                <button type="button" class="btn btn-primary" id="editHotelBtn">Edit Hotel</button>
+                <button type="button" class="btn btn-danger" id="deleteHotelBtn">Delete Hotel</button>
             </div>
         </div>
     `;
+}
+
+// Function to navigate to the editHotel.html page with the current hotel ID
+function editHotel() {
+    window.location.href = `editHotel.html?id=${hotelId}`;
+}
+
+// Function to handle the delete functionality
+function deleteHotel() {
+    window.location.href = `deleteHotel.html?id=${hotelId}`;
 }
 
 // Execute the fetchHotelDetails function when the page loads

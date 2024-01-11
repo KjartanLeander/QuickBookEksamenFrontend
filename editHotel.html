@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Hotel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Edit Hotel Form -->
+<div class="container">
+    <h1 class="mt-4 mb-3">Edit Hotel</h1>
+    <form id="edit-hotel-form">
+        <div class="mb-3">
+            <label for="hotelName" class="form-label">Hotel Name</label>
+            <input type="text" class="form-control" id="hotelName" required>
+        </div>
+        <div class="mb-3">
+            <label for="street" class="form-label">Street</label>
+            <input type="text" class="form-control" id="street" required>
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" required>
+        </div>
+        <div class="mb-3">
+            <label for="zip" class="form-label">ZIP Code</label>
+            <input type="text" class="form-control" id="zip" required>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" class="form-control" id="country" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Update Hotel</button>
+        <a id="goBackBtn" class="btn btn-secondary" href="#">Go Back</a>
+    </form>
+</div>
+
+<!-- JavaScript -->
+<script src="js/editHotel.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@latest/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
