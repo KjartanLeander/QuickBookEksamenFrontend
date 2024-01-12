@@ -4,7 +4,6 @@ document.getElementById("create-admin-form").addEventListener("submit", function
     const adminData = {
         username: document.getElementById("username").value,
         password: document.getElementById("password").value,
-        // Include other fields as needed
     };
 
     fetch('http://localhost:8080/admin/create', {

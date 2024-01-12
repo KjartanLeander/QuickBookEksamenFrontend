@@ -23,7 +23,6 @@ document.getElementById("admin-login-form").addEventListener("submit", function 
             console.log('Success:', data);
             alert('Admin logged in successfully!');
 
-            // Redirect or perform any other actions
             window.location.href = 'hotels.html';
         })
         .catch((error) => {

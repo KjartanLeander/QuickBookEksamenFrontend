@@ -22,7 +22,6 @@ document.getElementById("create-guest-form").addEventListener("submit", function
             console.log('Success:', data);
             alert('Guest created successfully!');
 
-            // Redirect to the login page
             window.location.href = 'login.html';
         })
         .catch((error) => {
