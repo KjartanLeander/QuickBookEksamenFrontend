@@ -2,7 +2,7 @@ document.getElementById("create-guest-form").addEventListener("submit", function
     event.preventDefault();
 
     const guestData = {
-        userName: document.getElementById("userName").value,
+        username: document.getElementById("username").value,
         password: document.getElementById("password").value,
         firstName: document.getElementById("firstName").value,
         lastName: document.getElementById("lastName").value,
@@ -22,7 +22,8 @@ document.getElementById("create-guest-form").addEventListener("submit", function
             console.log('Success:', data);
             alert('Guest created successfully!');
 
-            window.location.href = 'hotels.html';
+            // Redirect to the login page
+            window.location.href = 'login.html';
         })
         .catch((error) => {
             console.error('Error:', error);
